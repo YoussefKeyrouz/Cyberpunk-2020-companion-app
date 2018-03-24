@@ -16,18 +16,24 @@ class SkillsFragment : Fragment(), SkillsChildFragment.SkillsFragmentInteraction
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadSkillsView(false)
+        loadAbilitiesView()
     }
 
-    private fun loadSkillsView(animate: Boolean) {
-        loadFragment(SkillsChildFragment(), animate)
+    private fun loadSkillsView() {
+        loadFragment(SkillsChildFragment(), true, true)
     }
 
-    private fun loadAbilitiesView(animate: Boolean) {
-        loadFragment(AbilitiesChildFragment(), animate)
+    private fun backToAbilitiesView() {
+        if (childFragmentManager.backStackEntryCount > 0) {
+            childFragmentManager.popBackStack()
+        }
     }
 
-    private fun loadFragment(frag: Fragment, animate: Boolean) {
+    private fun loadAbilitiesView() {
+        loadFragment(AbilitiesChildFragment(), false, false)
+    }
+
+    private fun loadFragment(frag: Fragment, withbackStack: Boolean, animate: Boolean) {
         val fragmentTransaction = childFragmentManager.beginTransaction()
         if(animate) {
             fragmentTransaction?.setCustomAnimations(
@@ -35,15 +41,18 @@ class SkillsFragment : Fragment(), SkillsChildFragment.SkillsFragmentInteraction
             )
         }
         fragmentTransaction?.replace(R.id.replaceLayout, frag)
+        if(withbackStack) {
+            fragmentTransaction.addToBackStack(null)
+        }
         fragmentTransaction?.commit()
     }
 
     override fun onSwitchToAbilitiesClicked() {
-        loadAbilitiesView(true)
+        backToAbilitiesView()
     }
 
     override fun onSwitchToSkillsClicked() {
-        loadSkillsView(true)
+        loadSkillsView()
     }
 
 }
