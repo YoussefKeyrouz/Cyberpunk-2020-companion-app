@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +27,8 @@ class AbilitiesChildFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
 
     private var mListener: AbilitiesFragmentInteractionListener? = null
 
+    private val abilitiesAdapter = AbilitiesAdapter(DataHolder.categories, this)
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_abilities_child, container, false)
@@ -36,7 +40,23 @@ class AbilitiesChildFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
             mListener?.onSwitchToSkillsClicked()
         }
         abilitiesRecyclerView.layoutManager = LinearLayoutManager(activity)
-        abilitiesRecyclerView.adapter = AbilitiesAdapter(DataHolder.categories, this)
+        abilitiesRecyclerView.adapter = abilitiesAdapter
+
+        searchText.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun onTextChanged(query: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if(query == null || query.count() == 0) {
+                    abilitiesAdapter.resetFilter()
+                } else {
+                    abilitiesAdapter.applySearchFilter(query.toString())
+                }
+            }
+        })
     }
     override fun onAttach(context: Context?) {
         super.onAttach(context)

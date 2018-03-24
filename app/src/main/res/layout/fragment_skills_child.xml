@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:textColor="@color/green_blue"
         android:background="@drawable/button_bg"
-        android:text="View Abilities"
+        android:text="Back to Abilities"
         android:textStyle="bold"
         />
 

@@ -60,12 +60,18 @@ abstract class SectionedRecyclerViewAdapter <HeaderVH : RecyclerView.ViewHolder,
         }
     }
 
-    final override fun getItemCount(): Int {
-        return if(itemCount == -1) setItemCount() else itemCount
+    fun resetData() {
+        itemCount = -1
+        notifyDataSetChanged()
     }
 
-    private fun setItemCount(): Int {
+    final override fun getItemCount(): Int {
+        return if(itemCount == -1) resetItemCount() else itemCount
+    }
+
+    private fun resetItemCount(): Int {
         itemCount = 0
+        headerPositions.clear()
         for (i in 0 until getSectionCount()) {
             headerPositions.add(itemCount)
             itemCount += getItemCountForSection(i) + 1

@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.skill_row.view.*
 class SkillsAdapter(private val skills: List<Skill>, private val listener: SkillsInteractionListener) :
         RecyclerView.Adapter<SkillsAdapter.SkillsViewHolder>() {
 
+
     interface SkillsInteractionListener {
         fun onRollClicked(skill: Skill)
     }
@@ -48,21 +49,21 @@ class SkillsAdapter(private val skills: List<Skill>, private val listener: Skill
     override fun getItemCount() = skills.size
 }
 
-class AbilitiesAdapter(private val categories: MutableList<Category>, private val listener: AbilitiesInteractionlistener) :
+class AbilitiesAdapter(private val categories: List<Category>, private val listener: AbilitiesInteractionlistener) :
         SectionedRecyclerViewAdapter<AbilitiesAdapter.AbilityHeadersViewHolder, AbilitiesAdapter.AbilitiesViewHolder>() {
 
-
+    private var filteredCategories = categories
     interface AbilitiesInteractionlistener {
         fun onRollClicked(ability: Ability)
         fun onInfoClicked(info: String)
     }
 
     override fun getSectionCount(): Int {
-        return categories.size
+        return filteredCategories.size
     }
 
     override fun getItemCountForSection(section: Int): Int {
-        return categories[section].abilities.size
+        return filteredCategories[section].abilities.size
     }
 
     override fun onCreateHeaderViewHolder(parent: ViewGroup, viewType: Int): AbilityHeadersViewHolder {
@@ -76,12 +77,12 @@ class AbilitiesAdapter(private val categories: MutableList<Category>, private va
     }
 
     override fun onBindHeaderViewHolder(holder: AbilityHeadersViewHolder, position: Int) {
-        val category = categories[position]
+        val category = filteredCategories[position]
         holder.itemView.skillName.text = category.name
     }
 
     override fun onBindRowViewHolder(holder: AbilitiesViewHolder, section: Int, position: Int) {
-        val ability = categories[section].abilities[position]
+        val ability = filteredCategories[section].abilities[position]
         holder.itemView.skillButton.text = ability.name
         holder.itemView.valueText.text = ability.value.toString()
         holder.itemView.modifierText.text = ability.modifier.toString()
@@ -97,4 +98,24 @@ class AbilitiesAdapter(private val categories: MutableList<Category>, private va
     class AbilitiesViewHolder(view: View) : RecyclerView.ViewHolder(view)
     class AbilityHeadersViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
+    fun resetFilter() {
+        filteredCategories=categories
+        resetData()
+    }
+
+    fun applySearchFilter(query: String) {
+        filteredCategories = getFilteredAbilities(categories, query)
+        resetData()
+
+    }
+
+    private fun getFilteredAbilities(list: List<Category>, query: String) : List<Category> {
+        return list.map { category ->
+            category.copy(abilities = category.abilities.filter {ability ->
+                ability.name.contains(query, true)
+            }.toMutableList())
+
+        }
+    }
 }
+
