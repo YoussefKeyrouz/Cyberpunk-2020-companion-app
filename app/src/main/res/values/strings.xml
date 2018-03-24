@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cyberpad</string>
+    <string name="tab_menu_status">Status</string>
+    <string name="tab_menu_inventory">Inventory</string>
+    <string name="tab_menu_skills">Skills</string>
+    <string name="tab_menu_feed">Feed</string>
+    <string name="under_construction">Coming Soon</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

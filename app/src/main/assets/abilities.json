@@ -1,0 +1,384 @@
+{
+  "SPECIAL ABILITY": {
+    "a0": {
+      "name": "AUTHORITY",
+      "skill": "COOL",
+      "desc": "The ability to intimidate or control others through your position as a lawman. COps can use Authority to question suspects, arrest wrongdooers, and defend innocents. Also can call on the forces of the law and government to get what he wants"
+    },
+    "a1": {
+      "name": "CHARISMATIC LEADERSHIP",
+      "skill": "ATTRACTIVENESS",
+      "desc": "This skill allows the Rocker to sway crowds, control, inite and charm large number of people."
+    },
+    "a2": {
+      "name": "COMBAT SENSE",
+      "skill": "REFLEXES",
+      "desc": "Allow the Solo to perceive danger, notice traps, and have almost unearthly ability to avoid harm. "
+    },
+    "a3": {
+      "name": "CREDIBILITY",
+      "skill": "INTELLIGENCE",
+      "desc": "This is the ability to be believed, convincing people to give you information or get you into where the story is really happening. "
+    },
+    "a4": {
+      "name": "SURVIVAL INSTINCT",
+      "skill": "REFLEXES",
+      "desc": "Ability to survive. Whether you are in a hostile environment or the wilderness or lacking food or water or your life is in danger, the higher this ability the more you'll survive it."
+    },
+    "a5": {
+      "name": "INTERFACE",
+      "skill": "INTELLIGENCE",
+      "desc": "Ability to interface with any hardware/Net comm. Netrunners add this to their Programming, and System Knowledge, as they pertain to computers and communications"
+    },
+    "a6": {
+      "name": "JURY RIG",
+      "skill": "TECH",
+      "desc": "This skill allows you to repair or construct equipment using items and supplies from salvaged parts and junk most people would not think to use."
+    },
+    "a7": {
+      "name": "MEDICAL TECH",
+      "skill": "TECH",
+      "desc": "This is the skill used to perform major surgery and medical repairs/heals."
+    },
+    "a8": {
+      "name": "RESOURCES",
+      "skill": "ATTRACTIVENESS",
+      "desc": "Corporate's ability to command corporation resources. Include bodyguards, money, corporate secrets..."
+    },
+    "a9": {
+      "name": "STREETDEAL",
+      "skill": "INTELLIGENCE",
+      "desc": "This is the ability to deal with the underground information network. Whether to make a deal in the black market, to uncover missing persons or things, anything that goes in the undergrounds nowaday."
+    }
+  },
+  "ATTRACTIVENESS": {
+    "a10": {
+      "name": "PERSONAL GROOMING",
+      "desc": "This is the skill of knowing proper grooming, hair styling, etc., to maximize your physical attractiveness. Use of this skill allows players to increase their Attractiveness, and thus their chances of successful Relationships or Persuasion."
+    },
+    "a11": {
+      "name": "WARDROBE & STYLE",
+      "desc": "The skill of knowing the right clothes to wear, when to wear them, and how to look cool even in a spacesuit."
+    }
+  },
+  "BODY": {
+    "a12": {
+      "name": "ENDURANCE",
+      "desc": "This is the ability to withstand pain or hardship, particularly over long periods of time, by knowing the best ways to conserve strength and energy. Endurance Skill checks would be made whenever a character must continue to be active a long period without food, sleep or water"
+    },
+    "a13": {
+      "name": "STRENGTH FEAT",
+      "desc": "The user of this skill has practiced the art of bending bars, crushing objects, ripping phone books apart and other useful parlor tricks."
+    },
+    "a14": {
+      "name": "SWIMMING",
+      "desc": "This skill is require to know how to swim "
+    }
+  },
+  "COOL": {
+    "a15": {
+      "name": "INTERROGATION",
+      "desc": "The skill of drawing information from subject and forcing his secrets into open"
+    },
+    "a16": {
+      "name": "INTIMIDATE",
+      "desc": "The skill of getting people to do what you want by forcing personality or physical coercion"
+    },
+    "a17": {
+      "name": "ORATORY",
+      "desc": "The skill of public speaking. This also covers the use of Rhetoric"
+    },
+    "a18": {
+      "name": "RESIST TORTURE/DRUGS",
+      "desc": "Characters with this skill are especially toughened against interrogation, torture and mind control drugs. A successful use of this skill will automatically increase the difficulty of any Interrogation attempt made by another guy by one level."
+    },
+    "a19": {
+      "name": "STREETWISE",
+      "desc": "The knowledge of the 'seamy' ways of life - where to get illegal and contraband things, how to talk to the criminal environment, and avoiding bad situations in bad neighborhoods."
+    }
+  },
+  "EMPATHY": {
+    "a20": {
+      "name": "HUMAN PERCEPTION",
+      "desc": " The skill of detecting any evasions, moods and other emotional clues from others. "
+    },
+    "a21": {
+      "name": "INTERVIEW",
+      "desc": "The skill of eliciting interesting anecdotes from interview subject. This information will be of a more non-specific and personal nature rather than specific knowledge (distinguishing this skill from the skill Interrogation, where the user is trying to extract exact information."
+    },
+    "a22": {
+      "name": "LEADERSHIP",
+      "desc": "The skill of leading and convincing people to follow you."
+    },
+    "a23": {
+      "name": "SEDUCTION",
+      "desc": " The skill of forming and maintaining romantic relationships (this includes your abilities as a lover). This skill may be used to determine whether or not players can form relationships with other non-players characters and the intensity of these relationships. "
+    },
+    "a24": {
+      "name": "SOCIAL",
+      "desc": " The ability to deal with social situations, like knowing the right fork to use or when not to tell the joke about farmer's daughter and the traveling salesman. "
+    },
+    "a25": {
+      "name": "PERSUASION & FAST TALK",
+      "desc": "The ability to talk others into doing what you want. This may be used individually or on large groups"
+    },
+    "a26": {
+      "name": "PERFORM",
+      "desc": "The skill of trained acting, singing, etc."
+    }
+  },
+  "INTELLIGENCE": {
+    "a27": {
+      "name": "ACCOUNTING",
+      "desc": "The ability to balance books (or create false books), juggle numbers, create budgets and handle day to day business operations"
+    },
+    "a28": {
+      "name": "ANTHROPOLOGY",
+      "desc": "The knowlege of human Culture, habits and customs. Unlike Streetwise (which covers only the culture of the Street), or Social (which covers only waht you should do in a given situation), this covers general customs and background of a culture."
+    },
+    "a29": {
+      "name": "AWARENESS /NOTICE",
+      "desc": "This is equivalent of a 'trained observer' skill, allowing characters to notice or be aware of clues, shadowers and other events. Players without skill may only use their Intelligence Stat. Players of any Role should get a bonus if the Awareness task directly relates to their Special Ability; if a Medtech gets a fairly good Awareness roll, they may not realize they are walking into an ambush, but they will notice that the 'Traitor' is sweating profusely."
+    },
+    "a30": {
+      "name": "BIOLOGY",
+      "desc": "The required skills for Doing any bio-research or bio modification. General knowlege of animals plants and other biological systems"
+    },
+    "a31": {
+      "name": "BOTANY",
+      "desc": "The general knowlege of plants and plants identification"
+    },
+    "a32": {
+      "name": "CHEMISTRY",
+      "desc": "The required skill for mixing chemicals various compounds"
+    },
+    "a33": {
+      "name": "COMPOSITION",
+      "desc": "The required skill for writing songs, articles, or stories. "
+    },
+    "a34": {
+      "name": "DIAGNOSE ILLNESS",
+      "desc": "The skill of clinically diagnosing symptoms and medical problems. "
+    },
+    "a35": {
+      "name": "EDUCATION",
+      "desc": "This skill is the equivalent of a basic public school education, allowing you to know how to read, write, use basic math, and know enough history to get by. "
+    },
+    "a36": {
+      "name": "GAMBLE",
+      "desc": "The skill on knowing how to make bets, figure odds, and play games of chance successfully. As any professional gambler knows, this is not a luck skill. "
+    },
+    "a37": {
+      "name": "GEOLOGY",
+      "desc": "A functional knowlege of rocks, minerals and geologic structures."
+    },
+    "a38": {
+      "name": "HIDE/EVADE",
+      "desc": "The skill of losing pursuers, covering tracks and otherwise evading people on your trail."
+    },
+    "a39": {
+      "name": "HISTORY",
+      "desc": "The knowlege of facts and figures of past events. In game play, this might be used to determine if a character is familiar with a particular clue related to past event."
+    },
+    "a40": {
+      "name": "LIBRARY SEARCH",
+      "desc": "The skill of using databases, DataTerm�, libraries and other compiled information sources to find facts.  (Google search)"
+    },
+    "a41": {
+      "name": "MATHEMATICS",
+      "desc": "The skill of understanding calculations and mathematical formulas"
+    },
+    "a42": {
+      "name": "PHYSICS",
+      "desc": "The ability to calculate physical principles, like gas pressures, mechanical energies, etc."
+    },
+    "a43": {
+      "name": "PROGRAMMING",
+      "desc": "The required skill to write programs and reprogram computer system. This skill does not allow players to actually do repairs on a computer (this requires Electronics)."
+    },
+    "a44": {
+      "name": "SHADOW/TRACK",
+      "desc": "The skill of shadowing and following people. This skill is primary used in urban or inhabited areas rather than in wilderness (where the skill of Survival incorporates tracking game in the wilds"
+    },
+	"a45a": {
+      "name": "STOCK MARKET",
+      "desc": "Ability to make money from the stock market and how well can you read the charts."
+    },
+    "a45": {
+      "name": "SYSTEM KNOWLEDGE",
+      "desc": "Basic knowledge of the geography of the Net, it's lore and history, as well as knowledge of the important computer systems, their strengths and their weaknesses."
+    },
+    "a46": {
+      "name": "TEACHING",
+      "desc": "The skill of imparting knowledge to someone (if you don't think this is skill, you ought tot try is someone). Players may not teach any skill unless they have higher skill levels, in both teaching, and the skill(s) being taught, than the student"
+    },
+    "a47": {
+      "name": "WILDERNESS SURVIVAL",
+      "desc": "The required skill for knowing how to survive in the wild."
+    },
+    "a48": {
+      "name": "ZOOLOGY",
+      "desc": "Knowlege of lifeforms, biological processes and their relation to the environment"
+    }
+  },
+  "REFLEXES": {
+    "a49": {
+      "name": "ARCHERY",
+      "desc": "The skill required to use bows, crossbows and other arrow-based ranged weapons"
+    },
+    "a50": {
+      "name": "ATHLETICS",
+      "desc": "This skill is required for accurate throwing, climbing, and balancing."
+    },
+    "a51": {
+      "name": "BRAWLING",
+      "desc": "Brawling is the skill of fighting man to man with fist, feet and other parts of the body"
+    },
+    "a52": {
+      "name": "DANCE",
+      "desc": " The specific skill needed to become a professional dancer"
+    },
+    "a53": {
+      "name": "DODGE & ESCAPE",
+      "desc": "This skill is required to dodge attacks and escape grapples and holds."
+    },
+    "a54": {
+      "name": "DRIVING",
+      "desc": "Pilot all ground vehicles like cars, motorcycles, tanks."
+    },
+    "a55": {
+      "name": "FENCING",
+      "desc": "The mastery of the sword rapier and monoblades"
+    },
+    "a56": {
+      "name": "HANDGUN",
+      "desc": " You must have this skill to effectively use handguns of any type, including cyberware types."
+    },
+    "a57": {
+      "name": "HEAVY WEAPONS",
+      "desc": "The required skill for using grenade launchers, autocannon, mortars, heavy machine guns, missiles and rocket launchers."
+    },
+    "a58": {
+      "name": "MELEE",
+      "desc": " the ability to use knives, axes, clubs and other hand to hand weapons in combat. "
+    },
+    "a59": {
+      "name": "MOTORCYCLE",
+      "desc": "The required skill to operate motorcycles, and other two and three-wheeled vehicles"
+    },
+    "a60": {
+      "name": "OPERATE HVY. MACHINERY",
+      "desc": "The required skill to operate tractors, treaded vehicles, extremely large trucks and construction equip"
+    },
+    "a61": {
+      "name": "PILOT GYRO",
+      "desc": "he ability to pilot all types of rotorwing aircraft, including gyros, copters and Ospreys"
+    },
+    "a62": {
+      "name": "PILOT FIXED WING",
+      "desc": "The ability to pilot fixed wing jets and light aircraft. Ospreys may be flown with this skill, but not only in the straight ahead (non-hover) mode"
+    },
+    "a63": {
+      "name": "PILOT DIRIGIBLE",
+      "desc": "The ability to pilot all lighter than air vehicles, including cargo dirigibles, blimps and powered balloons."
+    },
+    "a64": {
+      "name": "PILOT VECT. THRUST VEHICLE",
+      "desc": "The skill of piloting all types of vectored thrust vehicles, and AV-4, 6 and 7 vehicles."
+    },
+    "a65": {
+      "name": "RIFLE",
+      "desc": "You must have this skill to use rifle/shotguns effectively"
+    },
+    "a66": {
+      "name": "STEALTH",
+      "desc": "The skill of hiding in shadows, moving silently, evading guards, etc"
+    },
+    "a67": {
+      "name": "SUBMACHINEGUN",
+      "desc": "You must have this skill to use any type of submachine gun effectively "
+    }
+  },
+  "TECH": {
+    "a68": {
+      "name": "AERO TECH",
+      "desc": " The required skill for repairing fixed wing aircraft, including Ospreys, jets, and light aircraft"
+    },
+    "a69": {
+      "name": "AV TECH",
+      "desc": "The required skill for repairing all aerodyne vehicles"
+    },
+    "a70": {
+      "name": "BASIC TECH",
+      "desc": "The required skill for building or repairing simple mechanical and electrical devices, such as car engines, Toasters, etc..."
+    },
+    "a71": {
+      "name": "CRYOTANK OPERATION",
+      "desc": "The ability to cut into a living thing and remove, implant, or make repairs. "
+    },
+    "a72": {
+      "name": "CYBERDECK DESIGN",
+      "desc": " The required skill for designing cyberdecks."
+    },
+    "a73": {
+      "name": "CYBERTECH",
+      "desc": "The required skill for repairing and maintaining cyberware. "
+    },
+    "a74": {
+      "name": "DEMOLITIONS",
+      "desc": "This skill allows the character to be knowledgeable in the use of explosives, as well as knowing the best explosives to use for which jobs, how to set times and detonators, and how much explosives to use to accomplish a desired result."
+    },
+    "a75": {
+      "name": "DISGUISE",
+      "desc": "The skill of disguising yourself to resemble someone else, whether real or fictitious."
+    },
+    "a76": {
+      "name": "ELECTRONICS",
+      "desc": "The required skill for maintaining, repairing and modifying electronic instruments such as computers, personal electronics hardware, electronic security systems, cameras and monitors."
+    },
+    "a77": {
+      "name": "ELECTRONIC SECURITY",
+      "desc": "The skill of installing or countering electronic eyes, electronic locks, bugs and tracers, security cameras, pressure plates, etc."
+    },
+    "a78": {
+      "name": "FIRST AID",
+      "desc": "This skill allows the user to bind wounds, stop bleeding, and revive a stunned patient."
+    },
+    "a79": {
+      "name": "FORGERY",
+      "desc": " The skill of copying and creating false documents and identifications. This skill Forgery also be applied to the detection of same; if you can fake it, you can usually tell a fake as well."
+    },
+    "a80": {
+      "name": "GYRO TECH",
+      "desc": "The skill or repairing and maintaining rotorwing aircraft such as helicopters and ospreys."
+    },
+    "a81": {
+      "name": "PAINT OR DRAW",
+      "desc": "The skill of producing professional drawings. "
+    },
+    "a82": {
+      "name": "PHOTO & FILM",
+      "desc": "The skill of producing professional caliber photographs or video."
+    },
+    "a83": {
+      "name": "PHARMACEUTICALS",
+      "desc": " The skill of designing and manufacturing drugs and medicines. (Chemistry is required)"
+    },
+    "a84": {
+      "name": "PICK LOCK",
+      "desc": "The skill required to pick locks and break into sealed containers and rooms. "
+    },
+    "a85": {
+      "name": "PICK POCKET",
+      "desc": " The required skill for picking pockets without being noticed, as well as 'shoplifting' small items. For ideas on levels of ability see Pick Lock. This also covers Sleight of Hand, the skill of making small objects disappear and reappear by using misdirection, nimble hand and finger movements, and other tricks."
+    },
+    "a86": {
+      "name": "PLAY INSTRUMENT",
+      "desc": "The skill of knowing how to play musical instruments"
+    },
+    "a87": {
+      "name": "WEAPONSMITH",
+      "desc": "The skill for repairing and maintaining weapons."
+    }
+  }
+}

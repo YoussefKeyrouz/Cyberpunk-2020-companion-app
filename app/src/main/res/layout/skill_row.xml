@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skill_button_shape">
+
+    <Button
+        android:id="@+id/skillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:background="@color/transparent"
+        android:text="AUTHORITY"
+         />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skillButton">
+
+        <TextView
+            android:id="@+id/valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/green"
+            android:text="10" />
+
+        <TextView
+            android:id="@+id/modifierText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/green"
+            android:text="+10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/modifierText"
+            android:layout_alignBaseline="@id/modifierText"
+            android:textSize="12sp"
+            android:layout_toStartOf="@id/modifierText"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/green_blue"
+            android:text="(Modifier)" />
+
+        <Button
+            android:id="@+id/infoButton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ic_error_outline_black_36dp"
+            style="@style/GreenBlueButton" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

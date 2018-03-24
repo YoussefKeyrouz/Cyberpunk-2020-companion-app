@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.y2thez.cyberpad.fragments.StatusFragment">
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:id="@+id/comingSoonLabel"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:reflectionColor="@color/neon"
+        android:textSize="@dimen/text_size_28"
+        android:text="@string/under_construction" />
+
+</RelativeLayout>
