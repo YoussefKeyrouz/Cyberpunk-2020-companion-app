@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import com.y2thez.cyberpad.data.SkillsManager
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 
 /**
  * Created by Y on 3/11/2018.
@@ -29,5 +30,11 @@ class Cyberpad: Application() {
         SkillsManager.loadAll()
         prefs = PreferenceManager.getDefaultSharedPreferences(this)
         prefsEdit = prefs.edit()
+
+        //Fonts
+        CalligraphyConfig.initDefault(CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Orbitron-Medium.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build())
     }
 }

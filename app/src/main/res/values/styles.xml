@@ -6,6 +6,20 @@
         <item name="colorPrimary">@color/green</item>
         <item name="android:windowBackground">@color/black</item>
         <item name="android:textSize">@dimen/text_size_26</item>
+        <item name="android:textViewStyle">@style/AppTheme.TextView</item>
+        <item name="android:editTextStyle">@style/AppTheme.EditText</item>
+        <item name="android:button">@style/AppTheme.Button</item>
+    </style>
+
+    <style name="AppTheme.TextView" parent="android:Widget.TextView">
+        <item name="fontPath">fonts/Orbitron-Medium.ttf</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="android:Widget.EditText">
+        <item name="fontPath">fonts/Orbitron-Medium.ttf</item>
+    </style>
+    <style name="AppTheme.Button" parent="android:Widget.Button">
+        <item name="fontPath">fonts/Orbitron-Medium.ttf</item>
     </style>
 
     <style name="GreenBlueButton" parent="Base.TextAppearance.AppCompat.Button" >

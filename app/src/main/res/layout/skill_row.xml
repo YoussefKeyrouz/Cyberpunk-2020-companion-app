@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/green"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
         android:background="@color/transparent"
         android:text="AUTHORITY"
          />
@@ -19,7 +19,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_below="@id/skillButton">
 
         <com.y2thez.cyberpad.widgets.PreferenceEditText

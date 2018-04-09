@@ -1,5 +1,6 @@
 package com.y2thez.cyberpad
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
@@ -7,6 +8,9 @@ import android.support.v7.app.AppCompatActivity
 import com.y2thez.cyberpad.fragments.ParentSkillsFragment
 import com.y2thez.cyberpad.fragments.StatusFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
+
+
 
 /**
  * Created by Y on 3/11/2018.
@@ -44,6 +48,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
     private fun loadStatus() {
         loadFragment(StatusFragment())
     }
