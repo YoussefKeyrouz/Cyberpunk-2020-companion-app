@@ -1,17 +1,17 @@
-<com.y2thez.cyberpad.widgets.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.y2thez.cyberpad.thirdparty.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.y2thez.cyberpad.fragments.SkillsChildFragment">
+    tools:context="com.y2thez.cyberpad.fragments.ChildSkillsFragment">
 
     <Button
         android:id="@+id/switchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:textColor="@color/green_blue"
+        android:textColor="@color/blue_medium"
         android:background="@drawable/button_bg"
-        android:text="Back to Abilities"
+        android:text="@string/back_to_abilities"
         android:textStyle="bold"
         />
 
@@ -20,4 +20,4 @@
         android:layout_below="@+id/switchButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-</com.y2thez.cyberpad.widgets.SlidingRelativeLayout>
+</com.y2thez.cyberpad.thirdparty.SlidingRelativeLayout>

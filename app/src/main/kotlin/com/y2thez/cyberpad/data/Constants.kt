@@ -9,14 +9,15 @@ class Constants {
         const val abilitiesFileName = "abilities.json"
         const val skillsFileName = "skills.json"
         const val customSkillsFileName = "custom.json"
-        const val valuesFileName = "values.json"
+//        const val valuesFileName = "values.json"
 
         //json constants
-        const val valueKey = "v"
-        const val modifierKey = "m"
+//        const val valueKey = "v"
+//        const val modifierKey = "m"
         const val skillKey = "skill"
         const val nameKey = "name"
         const val descKey = "desc"
+        const val modKey = "mod_"
 
         //Skills
         const val languageKey = "LANGUAGES"

@@ -7,10 +7,12 @@ import android.view.View
 import com.y2thez.cyberpad.R
 import com.y2thez.cyberpad.data.Ability
 import com.y2thez.cyberpad.data.Category
+import com.y2thez.cyberpad.data.Constants
 import com.y2thez.cyberpad.data.Skill
 import com.y2thez.cyberpad.widgets.SectionedRecyclerViewAdapter
 import kotlinx.android.synthetic.main.skill_header.view.*
 import kotlinx.android.synthetic.main.skill_row.view.*
+
 /**
  * Created by Y on 3/16/2018.
  */
@@ -38,13 +40,14 @@ class SkillsAdapter(private val skills: List<Skill>, private val listener: Skill
     override fun onBindViewHolder(holder: SkillsViewHolder, position: Int) {
         val skill = skills[position]
         holder.itemView.skillButton.text = skill.name
-        holder.itemView.valueText.text = skill.value.toString()
-        holder.itemView.modifierText.text = skill.modifier.toString()
+        holder.itemView.valueText.preferenceKey = skill.name
+        holder.itemView.modifierText.preferenceKey = Constants.modKey + skill.name
         holder.itemView.skillButton.setOnClickListener{
             listener.onRollClicked(skill)
         }
         holder.itemView.infoButton.visibility = View.INVISIBLE
     }
+
 
     override fun getItemCount() = skills.size
 }
@@ -56,6 +59,7 @@ class AbilitiesAdapter(private val categories: List<Category>, private val liste
     interface AbilitiesInteractionlistener {
         fun onRollClicked(ability: Ability)
         fun onInfoClicked(info: String)
+        fun onLongPressAbility(ability: Ability) : Boolean
     }
 
     override fun getSectionCount(): Int {
@@ -84,10 +88,14 @@ class AbilitiesAdapter(private val categories: List<Category>, private val liste
     override fun onBindRowViewHolder(holder: AbilitiesViewHolder, section: Int, position: Int) {
         val ability = filteredCategories[section].abilities[position]
         holder.itemView.skillButton.text = ability.name
-        holder.itemView.valueText.text = ability.value.toString()
-        holder.itemView.modifierText.text = ability.modifier.toString()
+
+        holder.itemView.valueText.preferenceKey = ability.key
+        holder.itemView.modifierText.preferenceKey = Constants.modKey + ability.key
         holder.itemView.skillButton.setOnClickListener{
             listener.onRollClicked(ability)
+        }
+        holder.itemView.skillButton.setOnLongClickListener{
+            listener.onLongPressAbility(ability)
         }
         holder.itemView.infoButton.setOnClickListener {
             listener.onInfoClicked(ability.desc)
@@ -115,7 +123,7 @@ class AbilitiesAdapter(private val categories: List<Category>, private val liste
                 ability.name.contains(query, true)
             }.toMutableList())
 
-        }
+        }.filter { category -> category.abilities.count() > 0 }
     }
 }
 

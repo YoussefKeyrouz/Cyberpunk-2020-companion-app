@@ -5,11 +5,22 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/green</item>
         <item name="android:windowBackground">@color/black</item>
-        <item name="android:textColor">@color/neon</item>
-        <item name="android:textSize">@dimen/text_size_28</item>
+        <item name="android:textSize">@dimen/text_size_26</item>
     </style>
 
     <style name="GreenBlueButton" parent="Base.TextAppearance.AppCompat.Button" >
         <item name="backgroundTint">@color/green_blue</item>
+    </style>
+
+    <style name="LightBlueButton" parent="Base.TextAppearance.AppCompat.Button" >
+        <item name="backgroundTint">@color/blue_light</item>
+    </style>
+
+    <style name="MediumBlueButton" parent="Base.TextAppearance.AppCompat.Button" >
+        <item name="backgroundTint">@color/blue_medium</item>
+    </style>
+
+    <style name="NeonButton" parent="Base.TextAppearance.AppCompat.Button" >
+        <item name="backgroundTint">@color/neon</item>
     </style>
 </resources>

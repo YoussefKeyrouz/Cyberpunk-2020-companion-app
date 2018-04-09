@@ -1,8 +1,5 @@
-package com.y2thez.cyberpad.widgets
+package com.y2thez.cyberpad.thirdparty
 
-/**
- * Created by Y on 3/11/2018.
- */
 import android.content.Context
 import android.util.AttributeSet
 import android.view.ViewTreeObserver
@@ -14,13 +11,12 @@ class SlidingRelativeLayout : RelativeLayout {
 
     private var preDrawListener: ViewTreeObserver.OnPreDrawListener? = null
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
     constructor(context: Context, attrs: AttributeSet,
-                defStyle: Int) : super(context, attrs, defStyle) {
-    }
+                defStyle: Int) : super(context, attrs, defStyle)
 
     fun setYFraction(fraction: Float) {
         this.yFraction = fraction

@@ -2,13 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/skill_button_shape">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/box_neon">
 
     <Button
         android:id="@+id/skillButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/green"
+        android:layout_marginTop="10dp"
         android:background="@color/transparent"
         android:text="AUTHORITY"
          />
@@ -17,33 +19,44 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:layout_below="@id/skillButton">
 
-        <TextView
+        <com.y2thez.cyberpad.widgets.PreferenceEditText
             android:id="@+id/valueText"
-            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:inputType="numberSigned"
+            android:background="@color/transparent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/green"
-            android:text="10" />
+            app:preferenceType="Int"
+            android:text="0"
+            android:textColor="@color/green" />
 
-        <TextView
+
+        <com.y2thez.cyberpad.widgets.PreferenceEditText
             android:id="@+id/modifierText"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/green"
-            android:text="+10" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            app:preferenceType="Int"
+            android:gravity="center"
+            android:text="0"
+            android:inputType="numberSigned"
+            android:textColor="@color/green" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/modifierText"
             android:layout_alignBaseline="@id/modifierText"
             android:textSize="12sp"
             android:layout_toStartOf="@id/modifierText"
-            android:layout_marginRight="5dp"
-            android:textColor="@color/green_blue"
+            android:textColor="@color/blue_light"
             android:text="(Modifier)" />
 
         <Button
@@ -51,8 +64,8 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_centerVertical="true"
-            android:background="@mipmap/ic_error_outline_black_36dp"
-            style="@style/GreenBlueButton" />
+            android:background="@drawable/ic_error_outline_black_36dp"
+            style="@style/LightBlueButton" />
     </RelativeLayout>
 
 

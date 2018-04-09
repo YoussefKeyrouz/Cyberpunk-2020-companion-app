@@ -9,7 +9,9 @@ import com.y2thez.cyberpad.R
 import com.romainpiel.shimmer.Shimmer
 import kotlinx.android.synthetic.main.fragment_status.*
 
-
+/**
+ * Created by Y on 4/7/2018.
+ */
 class StatusFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

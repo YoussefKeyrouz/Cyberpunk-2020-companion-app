@@ -13,10 +13,11 @@ import com.y2thez.cyberpad.adapters.SkillsAdapter
 import com.y2thez.cyberpad.data.DataHolder
 import com.y2thez.cyberpad.data.Skill
 import kotlinx.android.synthetic.main.fragment_skills_child.*
-import org.jetbrains.anko.support.v4.toast
 
-
-class SkillsChildFragment : Fragment(), SkillsAdapter.SkillsInteractionListener {
+/**
+ * Created by Y on 4/7/2018.
+ */
+class ChildSkillsFragment : Fragment(), SkillsAdapter.SkillsInteractionListener {
 
 
     private var mListener: SkillsFragmentInteractionListener? = null
@@ -52,9 +53,10 @@ class SkillsChildFragment : Fragment(), SkillsAdapter.SkillsInteractionListener 
 
     interface SkillsFragmentInteractionListener {
         fun onSwitchToAbilitiesClicked()
+        fun onRollSkill(skill: Skill)
     }
 
     override fun onRollClicked(skill: Skill) {
-        toast(skill.name)
+        mListener?.onRollSkill(skill)
     }
 }

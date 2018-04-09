@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
     tools:context="com.y2thez.cyberpad.fragments.StatusFragment">
 
     <com.romainpiel.shimmer.ShimmerTextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         app:reflectionColor="@color/neon"
-        android:textSize="@dimen/text_size_28"
+        android:textSize="@dimen/text_size_26"
         android:text="@string/under_construction" />
 
 </RelativeLayout>

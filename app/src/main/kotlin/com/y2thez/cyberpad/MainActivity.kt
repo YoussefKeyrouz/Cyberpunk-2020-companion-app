@@ -4,10 +4,13 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import com.y2thez.cyberpad.fragments.SkillsFragment
+import com.y2thez.cyberpad.fragments.ParentSkillsFragment
 import com.y2thez.cyberpad.fragments.StatusFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Created by Y on 3/11/2018.
+ */
 class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -21,9 +24,11 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_inventory -> {
+                loadStatus()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_news -> {
+                loadStatus()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -35,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        loadStatus()
+        loadSkills()
+
     }
 
     private fun loadStatus() {
@@ -43,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadSkills() {
-        loadFragment(SkillsFragment())
+        loadFragment(ParentSkillsFragment())
     }
 
     private fun loadFragment(f: Fragment) {

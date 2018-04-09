@@ -3,7 +3,6 @@
     android:id="@+id/replaceLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.y2thez.cyberpad.fragments.SkillsFragment">
-
+    tools:context="com.y2thez.cyberpad.fragments.ParentSkillsFragment">
 
 </FrameLayout>

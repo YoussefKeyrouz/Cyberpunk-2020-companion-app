@@ -12,18 +12,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.y2thez.cyberpad.R
 import com.y2thez.cyberpad.adapters.AbilitiesAdapter
-import com.y2thez.cyberpad.data.Ability
-import com.y2thez.cyberpad.data.DataHolder
+import com.y2thez.cyberpad.data.*
 import kotlinx.android.synthetic.main.fragment_abilities_child.*
-import org.jetbrains.anko.support.v4.longToast
-import org.jetbrains.anko.support.v4.toast
+import android.os.Build
+import android.support.v7.app.AlertDialog
 
 
 /**
- * A simple [Fragment] subclass.
+ * Created by Y on 4/7/2018.
  */
-class AbilitiesChildFragment : Fragment(), AbilitiesAdapter.AbilitiesInteractionlistener {
-
+class ChildAbilitiesFragment : Fragment(), AbilitiesAdapter.AbilitiesInteractionlistener, AddAbilityDialogFragment.OnAddListener {
 
     private var mListener: AbilitiesFragmentInteractionListener? = null
 
@@ -42,6 +40,9 @@ class AbilitiesChildFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
         abilitiesRecyclerView.layoutManager = LinearLayoutManager(activity)
         abilitiesRecyclerView.adapter = abilitiesAdapter
 
+        addButton.setOnClickListener({
+            showAddDialog()
+        })
         searchText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
             }
@@ -74,14 +75,57 @@ class AbilitiesChildFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
 
     interface AbilitiesFragmentInteractionListener {
         fun onSwitchToSkillsClicked()
+        fun onRollAbility(ability: Ability)
     }
 
     override fun onRollClicked(ability: Ability) {
-        toast(ability.name)
+        mListener?.onRollAbility(ability)
+    }
+
+    override fun onLongPressAbility(ability: Ability): Boolean {
+        return if(ability.categoryName == Constants.languageKey || ability.categoryName == Constants.martialartsKey) {
+            confirmRemoval(ability)
+            true
+        } else {
+            false
+        }
     }
 
     override fun onInfoClicked(info: String) {
-        longToast(info)
+        showInfoDialog(info)
     }
+
+    private fun showInfoDialog(infoText: String) {
+        val fm = childFragmentManager
+        val infoDialogFragment = InfoDialogFragment.newInstance(infoText)
+        infoDialogFragment.show(fm, "fragment_info")
+    }
+
+    private fun showAddDialog() {
+        val fm = childFragmentManager
+        val addAbilityDialogFragment = AddAbilityDialogFragment()
+        addAbilityDialogFragment.show(fm, "fragment_info")
+    }
+
+    override fun onAdd() {
+        abilitiesAdapter.resetData()
+    }
+
+    private fun confirmRemoval(ability: Ability){
+        val builder: AlertDialog.Builder
+        val context = activity ?: return
+        builder = AlertDialog.Builder(context)
+        builder.setMessage("Are you sure you want to delete ${ability.name}?")
+                .setPositiveButton(android.R.string.yes, { _, _ ->
+                    SkillsManager.removeCustomAbility(ability)
+                    abilitiesAdapter.resetData()
+                })
+                .setNegativeButton(android.R.string.no, { _, _ ->
+                    // do nothing
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show()
+    }
+
 }
 

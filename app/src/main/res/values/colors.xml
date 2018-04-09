@@ -2,10 +2,14 @@
 <resources>
     <color name="blue">#00b8ff</color>
     <color name="blue_dark">#001eff</color>
+    <color name="blue_medium">#00a0ff</color>
     <color name="green_blue">#00ff9f</color>
+    <color name="blue_light">#a9ffff</color>
     <color name="green">#41ff00</color>
+    <color name="red">#ff0000</color>
     <color name="green_dark">#031e11</color>
     <color name="black">#000000</color>
+    <color name="black_trans">#dd000000</color>
     <color name="white">#ffffff</color>
     <color name="light_gray">#333333</color>
     <color name="neon">#d600ff</color>

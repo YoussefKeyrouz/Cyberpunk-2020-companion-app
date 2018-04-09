@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/main_header_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/skill_header_shape">
+    android:layout_height="80dp"
+    android:background="@drawable/blue_holo_box">
     <TextView
         android:id="@+id/skillName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="REFLEX"
+        android:textSize="@dimen/text_size_26"
+        android:layout_centerInParent="true"
+        android:textColor="@color/blue_light"
         android:textStyle="bold"
         android:layout_centerVertical="true"/>
 

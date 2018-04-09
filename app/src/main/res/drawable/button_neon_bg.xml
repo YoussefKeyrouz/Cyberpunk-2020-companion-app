@@ -10,6 +10,6 @@
         />
     <stroke
         android:width="2dp"
-        android:color="@color/blue_medium"
+        android:color="@color/neon"
         />
 </shape>

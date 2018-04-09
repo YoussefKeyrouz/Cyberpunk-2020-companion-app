@@ -1,17 +1,17 @@
-<com.y2thez.cyberpad.widgets.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.y2thez.cyberpad.thirdparty.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.y2thez.cyberpad.fragments.AbilitiesChildFragment">
+    tools:context="com.y2thez.cyberpad.fragments.ChildAbilitiesFragment">
 
     <Button
         android:id="@+id/switchButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:textColor="@color/green_blue"
+        android:textColor="@color/blue_medium"
         android:background="@drawable/button_bg"
-        android:text="View Skills"
+        android:text="@string/view_skills"
         android:textStyle="bold"
         />
 
@@ -20,21 +20,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/switchButton"
-        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="horizontal">
         <Button
-            android:layout_width="100dp"
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:text="EDIT" />
+            android:text="@string/add"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:background="@color/black_trans"/>
         <EditText
             android:id="@+id/searchText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/search_bar_shape"
-            android:hint="Search..."
-            android:textColor="@color/neon"
-            android:textColorHint="@color/green_dark" />
+            android:hint="@string/search"
+            android:inputType="textFilter"
+            android:maxLines="1"
+            android:textColor="@color/green"
+            android:textColorHint="@color/light_gray" />
+
     </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/abilitiesRecyclerView"
@@ -43,4 +52,4 @@
         android:layout_height="match_parent"/>
 
 
-</com.y2thez.cyberpad.widgets.SlidingRelativeLayout>
+</com.y2thez.cyberpad.thirdparty.SlidingRelativeLayout>

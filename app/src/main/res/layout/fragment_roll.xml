@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box_orange"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.y2thez.cyberpad.fragments.RollDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/icon_dice"
+            android:contentDescription="Roll: "/>
+
+        <TextView
+            android:id="@+id/skill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Intelligence"
+            android:textColor="@color/green_blue" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/roll_result"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roll_bg_blue"
+        android:gravity="center"
+        android:text="25"
+        android:textColor="@color/green_blue"
+        android:textSize="@dimen/text_size_60" />
+
+
+    <TextView
+        android:id="@+id/fumble_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fumble 6"
+        android:textColor="@color/green_blue" />
+
+    <LinearLayout
+        android:id="@+id/detailsBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+
+        android:background="@drawable/roll_info_shape"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/roll_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Roll 10 + 5"
+            android:textColor="@color/green_blue"
+
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/skill_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTELLIGENCE +8"
+            android:textColor="@color/green_blue"
+
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:id="@+id/ability_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Driving Skill +2"
+            android:textColor="@color/green_blue"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+</LinearLayout>

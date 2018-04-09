@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box_blue"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context="com.y2thez.cyberpad.fragments.AddAbilityDialogFragment">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:background="@drawable/search_bar_shape"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:buttonTint="@color/green"
+            android:textColor="@color/green"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/radio_martial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/martial_arts"
+            android:buttonTint="@color/green"
+            android:textColor="@color/green"
+            />
+    </RadioGroup>
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_shape"
+        android:hint="@string/name"
+        android:inputType="textFilter"
+        android:layout_margin="10dp"
+        android:maxLines="1"
+        android:textColor="@color/green"
+        android:textColorHint="@color/light_gray" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue_medium"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_bg"
+        android:text="@string/add"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

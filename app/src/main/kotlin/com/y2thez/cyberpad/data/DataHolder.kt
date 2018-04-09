@@ -10,8 +10,8 @@ class DataHolder {
     }
 }
 
-data class Skill(val name: String, val value: Int, var modifier:Int)
+data class Skill(val name: String)
 
-data class Ability(val key: String, val name: String, val desc: String, var value: Int, var modifier:Int, val skill: String)
+data class Ability(val key: String, val name: String, val desc: String, val skill: String, val categoryName: String)
 
 data class Category(val name:String, val abilities: MutableList<Ability>)
