@@ -13,6 +13,6 @@
     <string name="martial_arts">Martial Arts</string>
     <string name="name">Name</string>
     <string name="view_skills"><![CDATA[View Skills >]]></string>
-    <string name="add">Add</string>
+    <string name="add">Add Ability</string>
     <string name="search">Search...</string>
 </resources>

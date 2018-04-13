@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/box_orange"
+    android:columnCount="3"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/green"
+        android:layout_columnSpan="3"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:text="Reflex"
+        />
+    <Button
+        android:id="@+id/number_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="1"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="2"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="3"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="4"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="5"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="6"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="7"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="8"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="9"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/number_10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="10"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+    <Button
+        android:id="@+id/plus_minus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="+ / -"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+    <Button
+        android:id="@+id/number_0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/blue_holo_box"
+        android:text="0"
+        android:textColor="@color/blue_light"
+        android:textSize="@dimen/text_size_40" />
+
+
+</GridLayout>

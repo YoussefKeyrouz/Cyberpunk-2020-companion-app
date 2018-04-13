@@ -5,10 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
 import com.y2thez.cyberpad.R
-import com.y2thez.cyberpad.data.Ability
-import com.y2thez.cyberpad.data.Category
-import com.y2thez.cyberpad.data.Constants
-import com.y2thez.cyberpad.data.Skill
+import com.y2thez.cyberpad.data.*
 import com.y2thez.cyberpad.widgets.SectionedRecyclerViewAdapter
 import kotlinx.android.synthetic.main.skill_header.view.*
 import kotlinx.android.synthetic.main.skill_row.view.*
@@ -55,6 +52,7 @@ class SkillsAdapter(private val skills: List<Skill>, private val listener: Skill
 class AbilitiesAdapter(private val categories: List<Category>, private val listener: AbilitiesInteractionlistener) :
         SectionedRecyclerViewAdapter<AbilitiesAdapter.AbilityHeadersViewHolder, AbilitiesAdapter.AbilitiesViewHolder>() {
 
+    var filterVisibility = false
     private var filteredCategories = categories
     interface AbilitiesInteractionlistener {
         fun onRollClicked(ability: Ability)
@@ -106,18 +104,26 @@ class AbilitiesAdapter(private val categories: List<Category>, private val liste
     class AbilitiesViewHolder(view: View) : RecyclerView.ViewHolder(view)
     class AbilityHeadersViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
+    fun toggleVisibility() {
+        filterVisibility = !filterVisibility
+    }
+
     fun resetFilter() {
-        filteredCategories=categories
+        filteredCategories = if(filterVisibility) {
+            getVisibleAbilities(categories)
+        } else {
+            categories
+        }
         resetData()
     }
 
     fun applySearchFilter(query: String) {
-        filteredCategories = getFilteredAbilities(categories, query)
+        filteredCategories = getQueriedAbilities(categories, query)
         resetData()
 
     }
 
-    private fun getFilteredAbilities(list: List<Category>, query: String) : List<Category> {
+    private fun getQueriedAbilities(list: List<Category>, query: String) : List<Category> {
         return list.map { category ->
             category.copy(abilities = category.abilities.filter {ability ->
                 ability.name.contains(query, true)
@@ -125,5 +131,15 @@ class AbilitiesAdapter(private val categories: List<Category>, private val liste
 
         }.filter { category -> category.abilities.count() > 0 }
     }
+
+    private fun getVisibleAbilities(list: List<Category>) : List<Category> {
+        return list.map { category ->
+            category.copy(abilities = category.abilities.filter {ability ->
+                SkillsManager.getValueForSkill(ability.key) != 0 || SkillsManager.getValueForSkill(Constants.modKey + ability.key) != 0
+            }.toMutableList())
+
+        }.filter { category -> category.abilities.count() > 0 }
+    }
+
 }
 

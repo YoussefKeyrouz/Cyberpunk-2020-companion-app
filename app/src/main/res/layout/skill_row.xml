@@ -22,7 +22,7 @@
         android:layout_margin="10dp"
         android:layout_below="@id/skillButton">
 
-        <com.y2thez.cyberpad.widgets.PreferenceEditText
+        <com.y2thez.cyberpad.widgets.PreferenceButton
             android:id="@+id/valueText"
             android:layout_centerVertical="true"
             android:layout_width="50dp"
@@ -36,7 +36,7 @@
             android:textColor="@color/green" />
 
 
-        <com.y2thez.cyberpad.widgets.PreferenceEditText
+        <com.y2thez.cyberpad.widgets.PreferenceButton
             android:id="@+id/modifierText"
             android:layout_width="60dp"
             android:background="@color/transparent"

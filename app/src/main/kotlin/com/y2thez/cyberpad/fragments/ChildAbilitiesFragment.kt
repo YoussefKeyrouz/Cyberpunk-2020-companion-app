@@ -43,6 +43,9 @@ class ChildAbilitiesFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
         addButton.setOnClickListener({
             showAddDialog()
         })
+        filterButton.setOnClickListener({
+            changeFilter()
+        })
         searchText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
             }
@@ -51,11 +54,7 @@ class ChildAbilitiesFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
             }
 
             override fun onTextChanged(query: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                if(query == null || query.count() == 0) {
-                    abilitiesAdapter.resetFilter()
-                } else {
-                    abilitiesAdapter.applySearchFilter(query.toString())
-                }
+                applySearch(query.toString())
             }
         })
     }
@@ -109,6 +108,19 @@ class ChildAbilitiesFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
 
     override fun onAdd() {
         abilitiesAdapter.resetData()
+    }
+
+    private fun applySearch(query: String) {
+        if(query == null || query.count() == 0) {
+            abilitiesAdapter.resetFilter()
+        } else {
+            abilitiesAdapter.applySearchFilter(query)
+        }
+    }
+
+    private fun changeFilter() {
+        abilitiesAdapter.toggleVisibility()
+        applySearch(searchText.text.toString())
     }
 
     private fun confirmRemoval(ability: Ability){

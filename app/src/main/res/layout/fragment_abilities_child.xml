@@ -4,35 +4,57 @@
     android:layout_height="match_parent"
     tools:context="com.y2thez.cyberpad.fragments.ChildAbilitiesFragment">
 
-    <Button
-        android:id="@+id/switchButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/blue_medium"
-        android:background="@drawable/button_bg"
-        android:text="@string/view_skills"
-        android:textStyle="bold"
-        />
-
     <LinearLayout
         android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_below="@id/switchButton"
         android:focusable="true"
+
         android:focusableInTouchMode="true"
         android:orientation="horizontal">
         <Button
             android:id="@+id/addButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:layout_weight="1"
+            android:text="@string/add"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_medium" />
+        <Button
+            android:id="@+id/switchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="@string/view_skills"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:textColor="@color/blue_medium"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/filterButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_26"
+            android:text="Filter"
             android:textColor="@color/green"
-            android:background="@color/black_trans"/>
+            android:gravity="center"
+            android:background="@color/black_trans"
+            android:textAllCaps="false" />
         <EditText
             android:id="@+id/searchText"
             android:layout_width="match_parent"
@@ -45,11 +67,12 @@
             android:textColorHint="@color/light_gray" />
 
     </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/abilitiesRecyclerView"
-        android:layout_below="@+id/headerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchLayout" />
 
 
 </com.y2thez.cyberpad.thirdparty.SlidingRelativeLayout>
