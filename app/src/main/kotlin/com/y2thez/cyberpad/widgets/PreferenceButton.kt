@@ -7,9 +7,13 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v7.widget.AppCompatButton
+import android.support.v7.widget.TintContextWrapper
 import com.y2thez.cyberpad.Cyberpad
 import com.y2thez.cyberpad.R
 import com.y2thez.cyberpad.fragments.NumberPickerDialogFragment
+import android.content.ContextWrapper
+import android.app.Activity
+import com.y2thez.cyberpad.utilities.getParentActivity
 
 
 /**
@@ -92,6 +96,11 @@ open class PreferenceButton : AppCompatButton, NumberPickerDialogFragment.Number
             fm = parent.childFragmentManager
         } else if (parent is FragmentActivity) {
             fm = parent.supportFragmentManager
+        } else {
+            val parentActivity = getParentActivity()
+            if (parentActivity is FragmentActivity) {
+                fm = parentActivity.supportFragmentManager
+            }
         }
         if (fm == null) {
             return
@@ -120,4 +129,5 @@ open class PreferenceButton : AppCompatButton, NumberPickerDialogFragment.Number
         super.setText(text)
 
     }
+
 }

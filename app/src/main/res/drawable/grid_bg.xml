@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/grid"
+    android:src="@drawable/bg_circuits_big"
     android:tileMode="repeat">
 
 </bitmap>

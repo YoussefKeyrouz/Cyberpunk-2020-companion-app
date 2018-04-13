@@ -11,26 +11,31 @@
         android:layout_alignParentTop="true"
         android:layout_below="@id/switchButton"
         android:focusable="true"
-
         android:focusableInTouchMode="true"
         android:orientation="horizontal">
         <Button
             android:id="@+id/addButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:background="@drawable/button_bg"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="@string/add"
+            android:lines="1"
             android:textAllCaps="false"
+            android:textSize="@dimen/text_size_22"
             android:textColor="@color/blue_medium" />
         <Button
             android:id="@+id/switchButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:background="@drawable/button_bg"
             android:text="@string/view_skills"
             android:textAllCaps="false"
             android:layout_weight="1"
+            android:lines="1"
+            android:textSize="@dimen/text_size_22"
+            android:gravity="center"
             android:textColor="@color/blue_medium"
             android:textStyle="bold" />
     </LinearLayout>

@@ -2,6 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="text_size_18">18sp</dimen>
     <dimen name="text_size_26">26sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
     <dimen name="text_size_60">60sp</dimen>
     <dimen name="text_size_40">40sp</dimen>
     <integer name="card_flip_time_full">300</integer>
