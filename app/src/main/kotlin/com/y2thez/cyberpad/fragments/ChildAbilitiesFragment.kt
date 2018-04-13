@@ -111,7 +111,7 @@ class ChildAbilitiesFragment : Fragment(), AbilitiesAdapter.AbilitiesInteraction
     }
 
     private fun applySearch(query: String) {
-        if(query == null || query.count() == 0) {
+        if( query.count() == 0) {
             abilitiesAdapter.resetFilter()
         } else {
             abilitiesAdapter.applySearchFilter(query)

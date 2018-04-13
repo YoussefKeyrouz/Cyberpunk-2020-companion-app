@@ -17,18 +17,8 @@ import kotlinx.android.synthetic.main.number_picker_dialog.*
 class NumberPickerDialogFragment : DialogFragment(), View.OnClickListener {
 
     private var isNegated: Boolean = false
-    private var titleText: String = "Select"
     private var buttons: MutableList<Button> = mutableListOf()
     private var mListener: NumberPickerListener? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val args = arguments
-        if (args != null) {
-            titleText = args.getString(ARG_INFO_TITLE)
-        }
-
-    }
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -112,13 +102,9 @@ class NumberPickerDialogFragment : DialogFragment(), View.OnClickListener {
     }
 
     companion object {
-        private const val ARG_INFO_TITLE = "ARG_INFO_TITLE"
 
-        fun newInstance(titleText: String): NumberPickerDialogFragment {
+        fun newInstance(): NumberPickerDialogFragment {
             val fragment = NumberPickerDialogFragment()
-            val args = Bundle()
-            args.putString(ARG_INFO_TITLE, titleText)
-            fragment.arguments = args
             return fragment
         }
     }

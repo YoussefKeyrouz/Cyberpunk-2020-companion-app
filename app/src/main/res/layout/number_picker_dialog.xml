@@ -7,16 +7,6 @@
     android:columnCount="3"
     android:padding="20dp">
 
-    <TextView
-        android:id="@+id/title"
-        android:textColor="@color/green"
-        android:layout_columnSpan="3"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="true"
-        android:text="Reflex"
-        />
     <Button
         android:id="@+id/number_1"
         android:layout_width="100dp"

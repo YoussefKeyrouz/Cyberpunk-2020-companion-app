@@ -21,7 +21,6 @@ open class PreferenceButton : AppCompatButton, NumberPickerDialogFragment.Number
         saveText(value.toString())
     }
 
-    var relatedTitle : String = "Select"
     var preferenceKey : String? = null
         set(value) {
             field = value
@@ -97,7 +96,7 @@ open class PreferenceButton : AppCompatButton, NumberPickerDialogFragment.Number
         if (fm == null) {
             return
         }
-        val numberPickerDialogFragment = NumberPickerDialogFragment.newInstance(relatedTitle)
+        val numberPickerDialogFragment = NumberPickerDialogFragment.newInstance()
         numberPickerDialogFragment.setListener(this)
         numberPickerDialogFragment.show(fm, "fragment_numbers")
     }
