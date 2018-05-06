@@ -3,8 +3,11 @@ package com.y2thez.cyberpad
 import android.app.Application
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import com.google.firebase.database.FirebaseDatabase
 import com.y2thez.cyberpad.data.SkillsManager
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
+
+
 
 /**
  * Created by Y on 3/11/2018.
@@ -20,8 +23,7 @@ class Cyberpad: Application() {
 
     companion object {
         lateinit var prefs : SharedPreferences
-        lateinit var prefsEdit :SharedPreferences.Editor
-
+        lateinit var prefsEdit : SharedPreferences.Editor
         lateinit var context: Cyberpad
             private set
     }
@@ -36,5 +38,7 @@ class Cyberpad: Application() {
                 .setDefaultFontPath("fonts/Orbitron-Medium.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build())
+
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true)
     }
 }

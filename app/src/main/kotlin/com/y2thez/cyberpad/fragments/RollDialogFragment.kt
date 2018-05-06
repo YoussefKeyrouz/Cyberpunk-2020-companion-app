@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import com.y2thez.cyberpad.R
+import com.y2thez.cyberpad.utilities.IOUtilities
+import com.y2thez.cyberpad.utilities.getBitmap
 import kotlinx.android.synthetic.main.fragment_roll.*
 import org.jetbrains.anko.textColor
 
@@ -44,6 +46,9 @@ class RollDialogFragment : DialogFragment() {
         roll_result.setOnClickListener({
             this.dismiss()
         })
+        share_button.setOnClickListener {
+            share()
+        }
         roll_result.text = res.toString()
         skill_name.text = skillName
         val context = activity ?: return
@@ -92,6 +97,12 @@ class RollDialogFragment : DialogFragment() {
 
     }
 
+    fun share() {
+
+        context?.let {
+            IOUtilities.shareBitmapToWhatsapp(it,roll_layout.getBitmap())
+        }
+    }
 
     companion object {
 

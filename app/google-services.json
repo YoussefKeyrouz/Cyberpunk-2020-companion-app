@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "42174498614",
+    "firebase_url": "https://cyberpunk-10d80.firebaseio.com",
+    "project_id": "cyberpunk-10d80",
+    "storage_bucket": "cyberpunk-10d80.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42174498614:android:334db130adc90d77",
+        "android_client_info": {
+          "package_name": "com.y2thez.cyberpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42174498614-r6kfb4ev17cfbbenbrudvoq5lbi3hjh7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.y2thez.cyberpad",
+            "certificate_hash": "06f9a4a149b4d28dad4d254041d70b8eff1d82e3"
+          }
+        },
+        {
+          "client_id": "42174498614-2b6meoruf9hle7p0kci80c1lhijfaaj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMM9IRMXz3DL4PQQdiueQdUZSxcOwtNRU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42174498614-2b6meoruf9hle7p0kci80c1lhijfaaj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

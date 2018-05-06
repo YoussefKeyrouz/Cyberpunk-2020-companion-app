@@ -52,18 +52,20 @@
 
         <Button
             android:id="@+id/filterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
             android:textSize="@dimen/text_size_26"
+            android:layout_weight="1"
             android:text="Filter"
-            android:textColor="@color/green"
+            android:textColor="@color/blue_medium"
             android:gravity="center"
-            android:background="@color/black_trans"
+            android:background="@drawable/button_bg"
             android:textAllCaps="false" />
         <EditText
             android:id="@+id/searchText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="3"
             android:background="@drawable/search_bar_shape"
             android:hint="@string/search"
             android:inputType="textFilter"
