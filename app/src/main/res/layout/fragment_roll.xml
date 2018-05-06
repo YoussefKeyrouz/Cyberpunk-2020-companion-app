@@ -9,36 +9,43 @@
     android:id="@+id/roll_layout"
     tools:context="com.y2thez.cyberpad.fragments.RollDialogFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageView
             android:layout_width="50dp"
+            android:id="@+id/rollicon"
             android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
             android:src="@drawable/icon_dice"
             android:contentDescription="Roll: "/>
 
         <TextView
             android:id="@+id/skill_name"
+            android:layout_toEndOf="@id/rollicon"
             android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/share_button"
             android:layout_height="wrap_content"
             android:text="Intelligence"
             android:textColor="@color/green_blue" />
 
         <Button
+            android:layout_alignParentEnd="true"
             android:id="@+id/share_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
             android:background="@drawable/icon_share"
             style="@style/LightBlueButton"
              />
-    </LinearLayout>
+    </RelativeLayout>
 
 
     <Button

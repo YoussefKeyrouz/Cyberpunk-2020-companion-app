@@ -86,7 +86,7 @@ class IOUtilities {
             intent.putExtra(Intent.EXTRA_STREAM, uri)
             intent.`package` = "com.whatsapp"
             try {
-                Cyberpad.context.startActivity(Intent.createChooser(intent, "Roll"))
+                context.startActivity(Intent.createChooser(intent, "Roll"))
             } catch (ex: android.content.ActivityNotFoundException) {
                 ex.printStackTrace()
             }
